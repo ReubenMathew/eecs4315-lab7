@@ -1,0 +1,5 @@
+// use Gradle's Java plugin
+apply plugin: "java"
+
+// if no task is specified, the build task is executed by default
+defaultTasks 'build'
