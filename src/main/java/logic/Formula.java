@@ -42,7 +42,7 @@ public abstract class Formula {
 	 */
 	public static Formula random(int depth) {
 		final int BASE_CASES = 2;
-		final int INDUCTIVE_CASES = 6;
+		final int INDUCTIVE_CASES = 4;
 		
 		if (depth == 0) {
 			switch (RANDOM.nextInt(BASE_CASES)) {
