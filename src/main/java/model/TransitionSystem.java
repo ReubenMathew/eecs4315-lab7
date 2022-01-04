@@ -80,6 +80,15 @@ public final class TransitionSystem {
 		return new TransitionSystem(states, transitions, labelling);
 	}
 	
+	/**
+	 * Returns the number of states of this transition system.
+	 * 
+	 * @return the number of states of this transition system
+	 */
+	public int getStates() {
+		return this.states;
+	}
+
 	@Override
 	public boolean equals(Object object) {
 		if (object != null && object instanceof TransitionSystem) {
@@ -153,5 +162,19 @@ public final class TransitionSystem {
 		}
 		toDot.append("}\n");
 		return toDot.toString();
+	}
+
+	/**
+	 * Tests whether the given state of this transition system has the 
+	 * given label.
+	 * 
+	 * @param state a state of this transition system
+	 * @pre. 0 &le; state, state &lt; states
+	 * @param label an atomic proposition
+	 * @return true if the given state of this transition system has the 
+	 * given label, false otherwise
+	 */
+	public boolean hasLabel(int state, String label) {
+		return this.labelling.get(state).contains(label);
 	}
 }
